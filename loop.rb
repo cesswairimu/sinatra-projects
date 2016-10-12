@@ -1,4 +1,10 @@
 require 'sinatra'
+before do
+  content_type :txt
+end
+not_found do
+  "Whoops your request was not found!! Check the address again``"
+end
 get '/home' do
   @users = ["Ryan", "Makak", "Lawrence", "Terrence", "Felix"]
   erb :home
