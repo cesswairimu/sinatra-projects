@@ -10,7 +10,7 @@ get '/set' do
   session[:foo] = Time.now
 end
 
-get '/value' do
+get '/fetch' do
   "The session is set to #{session[:foo]}"
 end
 get'/logout' do
