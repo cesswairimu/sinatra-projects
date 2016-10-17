@@ -2,7 +2,7 @@ require 'sinatra'
 before do
   content_type :txt
 end
-connections []
+connections = []
 
 get '/consume' do
   stream(:keep_open) do |out|
@@ -10,7 +10,7 @@ get '/consume' do
     connections << out
     out.callback { connections.delete(out) } #remove connection when closed properly
     out.errback do
-      logger.warn 'we just fot a mf connection'
+      logger.warn 'we just lost a mf connection'
       connections.delete(out)
     end
   end
