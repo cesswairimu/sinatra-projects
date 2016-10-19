@@ -1,4 +1,5 @@
 title: Updated
+
 date: 2016-10-19
 
 "Hello idiots i have not blogged for a while i have been busy learning 
