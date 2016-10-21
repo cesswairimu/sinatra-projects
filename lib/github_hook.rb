@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'time'
-class GithubHook < Sinatra::Bse
+class GithubHook < Sinatra::Base
   post '/update' do
     app.settings.reset!
     load app.settings.app_file
